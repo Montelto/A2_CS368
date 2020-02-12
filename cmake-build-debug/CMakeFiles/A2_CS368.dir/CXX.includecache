@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/cygdrive/c/Users/Joseph McFarland/CLionProjects/A2_CS368/BookDB.h
+iostream
+-
+vector
+-
+
+/cygdrive/c/Users/Joseph McFarland/CLionProjects/A2_CS368/demo.cpp
+BookDB.h
+/cygdrive/c/Users/Joseph McFarland/CLionProjects/A2_CS368/BookDB.h
+
