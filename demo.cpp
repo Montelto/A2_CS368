@@ -2,7 +2,8 @@
 // Joseph McFarland
 // 9072511679
 // mcfarland3@wis.edu
-//
+// https://canvas.wisc.edu/courses/188843/files for slides
+// Made in CLion with commits to GitHub
 //
 
 #include "BookDB.h"
@@ -10,11 +11,14 @@
 vector<Book> dataBase;
 Book book;
 
+/*
+ * main() demo function to read input and use switch case to interpret input.
+ */
 int main(){
     while (true) {
         string input;
         int i;
-        double d = 0;
+        double d;
         vector<Book> *yearBook;
         cout << ">";
         cin >> input;
@@ -52,6 +56,8 @@ int main(){
                     break;
                 case 'c':
                     d = calculateAverageRating(dataBase);
+                    if (d == -1.0)
+                        cerr << "No Books in Database";
                     cout << "Average rating = " << d << endl;
                     break;
                 case 'f':
@@ -63,10 +69,12 @@ int main(){
                 case 's':
                     int method;
                     cin >> method;
-                    sortDB(dataBase, method);
-                    print(dataBase);
+                    i = sortDB(dataBase, method);
+                    if (i == 0)
+                        print(dataBase);
                     break;
                 case 'q':
+                    cout << " quit" << endl;
                     return 0;
             }
         }

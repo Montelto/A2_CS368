@@ -6,14 +6,16 @@
 
 #IncludeRegexTransform: 
 
+/cygdrive/c/Users/Joseph McFarland/CLionProjects/A2_CS368/BookDB.cpp
+BookDB.h
+/cygdrive/c/Users/Joseph McFarland/CLionProjects/A2_CS368/BookDB.h
+
 /cygdrive/c/Users/Joseph McFarland/CLionProjects/A2_CS368/BookDB.h
 iostream
 -
 vector
 -
 algorithm
--
-sstream
 -
 
 /cygdrive/c/Users/Joseph McFarland/CLionProjects/A2_CS368/demo.cpp
