@@ -11,6 +11,10 @@ iostream
 -
 vector
 -
+algorithm
+-
+sstream
+-
 
 /cygdrive/c/Users/Joseph McFarland/CLionProjects/A2_CS368/demo.cpp
 BookDB.h

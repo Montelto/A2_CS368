@@ -15,6 +15,7 @@ int addBook(int bookID, int year, double rating, vector<Book> &db) {
     }
     Book b = {bookID, year, rating};
     db.push_back(b);
+    return 0;
 }
 
 int updateBook(int bookID, int year, double rating, vector<Book> &db) {
@@ -39,7 +40,7 @@ int deleteBook(int bookID, vector<Book> &db) {
 }
 
 vector<Book>* findBooks(int year, const vector<Book> &db) {
-    vector<Book> *booksByYear = new vector<Book>;
+    auto *booksByYear = new vector<Book>;
     for (auto &itr : db) {
         if (itr.year == year) {
             booksByYear->push_back(itr);
@@ -64,6 +65,32 @@ void print(const vector<Book> &db) {
     }
 }
 
+bool bookIDSort(const Book &a, const Book &b) {return a.ID < b.ID;}
+
+bool bookYearSort(const Book &a, const Book &b) {
+    if (a.year == b.year)
+        return a.ID < b.ID;
+    return a.year < b.year;
+}
+
+bool bookRatingSort(const Book &a, const Book &b) {
+    if (a.rating == b.rating)
+        return a.ID < b.ID;
+    return a.rating < b.rating;
+}
+
 int sortDB(vector<Book> &db, int sortingMethod) {
-    
+    switch (sortingMethod) {
+        case 1:
+            sort(db.begin(), db.end(), bookIDSort);
+            return 0;
+        case 2:
+            sort(db.begin(), db.end(), bookYearSort);
+            return 0;
+        case 3:
+            sort(db.begin(), db.end(), bookRatingSort);
+            return 0;
+        default:
+            return 1;
+    }
 }
